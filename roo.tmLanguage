@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>roo</string>
+	</array>
+	<key>name</key>
+	<string>Spring Roo</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>^\s*//.*$\n?</string>
+			<key>name</key>
+			<string>comment.roo</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^\w+</string>
+			<key>name</key>
+			<string>keyword.roo</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>--\w+</string>
+			<key>name</key>
+			<string>support.type.roo</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\"</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.roo</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\"</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.roo</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.double.roo</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#string_escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#string_placeholder</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.roo</string>
+	<key>uuid</key>
+	<string>f6f4eff7-78c6-4efe-a01b-6750d431b55b</string>
+</dict>
+</plist>
