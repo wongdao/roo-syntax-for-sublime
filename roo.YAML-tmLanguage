@@ -1,0 +1,32 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Spring Roo
+scopeName: source.roo
+fileTypes: [roo]
+uuid: f6f4eff7-78c6-4efe-a01b-6750d431b55b
+
+patterns:
+
+# comments
+- name: comment.roo
+  match: ^\s*//.*$\n?
+
+# commands
+- name: keyword.roo
+  match: ^\w+
+
+# options
+- name: support.type.roo
+  match: --\w+
+
+# string const
+- name: "string.quoted.double.roo"
+  begin: \"
+  beginCaptures:
+    '0': {name: punctuation.definition.string.begin.roo}
+  end: \"
+  endCaptures:
+    '0': {name: punctuation.definition.string.end.roo}
+  patterns:
+  - include: '#string_escaped_char'
+  - include: '#string_placeholder'
