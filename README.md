@@ -1,7 +1,7 @@
 # Spring Roo Syntax Highlight for Sublime Text 2
 
 
-Spring Roo Syntax Highlight for Sublime Text 2
+![](https://github.com/wongdao/roo-syntax-for-sublime/raw/master/screenshots/1.png)
 
 ## Install
 
